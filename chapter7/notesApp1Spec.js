@@ -1,26 +1,27 @@
 // File: chapter7/notesApp1Spec.js
 
-describe('ItemCtrl with inline mock', function() {
-  beforeEach(module('notesApp1'));
+describe('ItemCtrl with inline mock', function () {
+    beforeEach(module('notesApp1')); // instantiate our module
 
-  var ctrl, mockService;
+    var ctrl, mockService;
 
-  beforeEach(module(function($provide) {
-    mockService = {
-      list: function() {
-        return [{id: 1, label: 'Mock'}];
-      }
-    };
+    // override the ItemService with our own mock
+    beforeEach(module(function ($provide) {
+        mockService = {
+            list: function () {
+                return [{id: 1, label: 'Mock'}];
+            }
+        };
 
-    $provide.value('ItemService', mockService);
-  }));
+        $provide.value('ItemService', mockService);
+    }));
 
-  beforeEach(inject(function($controller) {
-    ctrl = $controller('ItemCtrl');
-  }));
+    beforeEach(inject(function ($controller) {
+        ctrl = $controller('ItemCtrl');
+    }));
 
-  it('should load mocked out items', function() {
-    expect(ctrl.items).toEqual([{id: 1, label: 'Mock'}]);
-  });
+    it('should load mocked out items', function () {
+        expect(ctrl.items).toEqual([{id: 1, label: 'Mock'}]);
+    });
 
 });
