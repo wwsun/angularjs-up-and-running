@@ -15,3 +15,8 @@ And relevant reading materials for learning AngularJS.
 1. [year of moo: AngularJS and SEO](http://www.yearofmoo.com/2012/11/angularjs-and-seo.html)
 2. [Github: angular-seo](https://github.com/steeve/angular-seo)
 3. [Github: angularytics](https://github.com/mgonto/angularytics)
+
+### CORS
+
+1. [Enable CORS](http://enable-cors.org/index.html)
+2. 
